@@ -1,5 +1,4 @@
 import random
-from typing import Dict
 
 print("🏫 WELCOME TO OUR LIBRARY 🏫")
 
@@ -12,7 +11,7 @@ def print_empty_row():
 create_delimeter()
 
 
-def get_fantasy_book():
+def get_fantasy_book() -> dict[str, list]:
     fantasy_library = {
         "J.R.R. Tolkien": [
             "The Hobbit",
@@ -34,7 +33,7 @@ def get_fantasy_book():
     return fantasy_library
 
 
-def get_science_book():
+def get_science_book() -> dict[str, list]:
 
     science_library = {
         "Isaac Asimov": ["Foundation", "I, Robot", "The Caves of Steel"],
@@ -53,7 +52,7 @@ def get_science_book():
     return science_library
 
 
-def get_mystery_book():
+def get_mystery_book() -> dict[str, list]:
     mystery_library = {
         "Agatha Christie": [
             "Murder on the Orient Express",
@@ -75,7 +74,7 @@ def get_mystery_book():
     return mystery_library
 
 
-def get_romance_book():
+def get_romance_book() -> dict[str, list]:
     romance_library = {
         "Jane Austen": ["Pride and Prejudice", "Sense and Sensibility", "Emma"],
         "Nicholas Sparks": ["The Notebook", "A Walk to Remember", "Dear John"],
@@ -85,7 +84,7 @@ def get_romance_book():
     return romance_library
 
 
-def get_history_book():
+def get_history_book() -> dict[str, list]:
     history_library = {
         "Ken Follett": [
             "The Pillars of the Earth",
@@ -106,7 +105,7 @@ def get_history_book():
 
     return history_library
 
-def show_autors_and_books_for_choosen_genre(choosen_genre_data: Dict):
+def show_autors_and_books_for_choosen_genre(choosen_genre_data: dict[str, list]) -> str:
     author = random.choice(list(choosen_genre_data.keys()))
     book = random.choice(choosen_genre_data[author])
 
